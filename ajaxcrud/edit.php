@@ -1,12 +1,12 @@
 <?php
 
   include('dbConnection.php');
-  // When you click Edit button below code get executed
+  
   $data = stripslashes(file_get_contents("php://input"));
   $mydata = json_decode($data, true); 
   $id = $mydata['sid'];
 
-  // Retrieve Specific Student information
+  // Retrieve contact data
   $sql = "SELECT * FROM `validcontacts` WHERE sno={$id} ";
   $result = $conn->query($sql);
   $row = $result->fetch_assoc();

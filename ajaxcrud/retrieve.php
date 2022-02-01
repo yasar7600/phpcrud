@@ -2,7 +2,7 @@
 ob_start();
 include('dbconnection.php');
 
-// Retrieve Student Information
+// Retrieve
 $sql = "SELECT * FROM `validcontacts`";
 $result = $conn->query($sql);
 if($result->num_rows > 0){
