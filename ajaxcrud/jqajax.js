@@ -8,7 +8,7 @@ $(document).ready(function () {
         method: "GET",
         dataType: "json",
         success: function (data) {
-          console.log(data);
+          //console.log(data);
           if (data) {
               x = data;
               
@@ -42,7 +42,7 @@ $(document).ready(function () {
     // Ajax Create Data
     $("#btnadd").click(function (e) {
       e.preventDefault();
-      console.log("Save Button Clicked");
+      //console.log("Save Button Clicked");
       let sn = $("#contactid").val();
       let nm = $("#name").val();
       let em = $("#email").val();
@@ -69,7 +69,7 @@ $(document).ready(function () {
     
     // Ajax Deleting Data
   $("tbody").on("click", ".btn-del", function () {
-    console.log("Delete Button Clicked");
+    //console.log("Delete Button Clicked");
     let id = $(this).attr("data-sid");
     //console.log(id);
     mydata = { sid: id };
@@ -95,9 +95,9 @@ $(document).ready(function () {
 
   //Ajax update data
   $("tbody").on("click",".btn-edit",function(){
-    console.log("Edit button Clicked");
+    //console.log("Edit button Clicked");
     let id = $(this).attr("data-sid");
-    console.log(id)
+    //console.log(id)
 
     mydata = {sid:id};
     $.ajax({
